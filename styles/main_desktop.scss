@@ -9,6 +9,8 @@
     padding: 0;
     text-decoration: none;
 }
+
+
 @font-face {
     font-family: "SkModern";
     src: url('../fonts/SkModernist.otf');
@@ -35,6 +37,13 @@ $main-color : #333;
 $main-blue: #2babe2;
 $main-green: #82c347;
 //pallette end
+
+::selection {
+  background: $main-green; /* WebKit/Blink Browsers */
+  color: white;
+  border: 1px solid $main-blue
+}
+
 
 // navbar start
 #navbar{
@@ -70,8 +79,10 @@ $main-green: #82c347;
         li{
             font-weight: bold;
             margin: 0px 15px;
-            padding: 0 10px;
-
+            padding: 0px 2px 10px;
+        }
+        li.active{
+            border-bottom: 2px solid $main-green;
         }
     }
     .navbar-function{
@@ -116,6 +127,13 @@ $main-green: #82c347;
     font-size: 18px;
     margin-bottom: 30px;
 }
+.dotted-ul{
+    padding-left: 25px;
+    margin: 5px 0 15px;
+    li{
+        list-style: disc;
+    }
+}
 .green{
     color: $main-green;
 }
@@ -129,6 +147,9 @@ $main-green: #82c347;
 .bg-blue{
     background-color: $main-blue;
     border: 1px solid $main-blue;
+}
+.w100{
+    width: 100%;
 }
 .w50{
     width: 50%;
@@ -165,6 +186,29 @@ $main-green: #82c347;
 }
 .bg-btn:active{
     transform: translateY(5px) scale(.95)
+}
+.underlined-btn{
+    padding-bottom: 5px;
+    display: inline-block;
+    border-bottom: 2px solid $main-green;
+    cursor: pointer;
+}
+.section-subtitle{
+    font-family: PierSans;
+    font-size: 20px;
+}
+.form-group{
+    font-family: SkModern;
+}
+.required:after{
+    content: " *";
+    color: red;
+}
+.mild-input{
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    padding: 7px 5px;
 }
 #indexSlider{
     background-color: #3d3d3d;
@@ -293,8 +337,6 @@ $main-green: #82c347;
         img{
             display: block;
             width: 100%;
-            // transform: scale(1.1);
-            // transition: all .6s ease;
         }
         .hover-tint{
             position: absolute;
@@ -309,6 +351,7 @@ $main-green: #82c347;
             z-index: 5;
             opacity: 0;
             filter: hue-rotate(0deg);
+            transition: opacity .3s ease;
         }
         .module-functions{
             height: 50px;
@@ -408,6 +451,194 @@ $main-green: #82c347;
         vertical-align: top;
     }
 }
+
+#pageBanner{
+    min-height: 30vw;
+    background: "";
+}
+
+#History{
+    .section-title:after{
+        content: "";
+        width: 100px;
+        border-bottom: 5px solid black;
+        display: block;
+        margin-top: 20px;
+    }
+}
+#scrollAbout{
+    background-image: url(../img/dummy-bg.png);
+    min-height: 35vw;
+    background-size: cover;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-color: #eee;
+}
+#mediaSlider{
+    margin-top: 50px;
+    .media-slide-items{
+        position: relative;
+        outline: none;
+        padding: 30px 0;
+    }
+    .white-title{
+        font-family: PierSans;
+        color: white;
+        font-size: 24px;
+    }
+    .quote-paragraph{
+        color: #333;
+        font-family: Akrobat;
+        margin: 20px 0 30px;
+        width: 55%;
+        line-height: 28px;
+        font-weight: 500;
+        font-size: 18px;
+    }
+    .white-author{
+        font-family: Akrobat;
+        font-style: italic;
+        color: white;
+    }
+    .right-avatar{
+        right: 20%;
+        bottom: 0;
+        position: absolute;
+        height: 115%;
+    }
+    .slick-dots{
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        li{
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            margin: 10px 7px;
+            border-radius: 50%;
+            border: 1px solid #eee;
+            background: #333;
+            transition: all .3s ease;
+            cursor: pointer;
+        }
+        button{
+            display: none;
+        }
+        li.slick-active{
+            background: white;
+            // width: 20px;
+            border-radius: 10px;
+        }
+    }
+}
+#news{
+    margin: 30px 0 0;
+    padding: 0;
+    .news-parent-container{
+        display: flex;
+        flex-wrap: wrap;
+        font-family: PierSans;
+        padding: 65px 0;
+        border-bottom: 1px solid #eee;
+    }
+    .month-sort{
+        border-bottom: 5px solid #eee;
+        margin-top: 50px;
+    }
+    .news-date{
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 30px;
+        font-family: PierSans;
+    }
+    .news-category{
+        color: #757575;
+        font-family: 18px;
+    }
+    .news-title{
+        font-size: 30px;
+        color: $main-green;
+        margin: 15px 0 20px;
+        font-weight: bold;
+    }
+    .news-img{
+        display: block;
+    }
+}
+#pressroom{
+    background: $main-green;
+    color: white;
+    font-family: PierSans;
+    font-weight: bold;
+    text-align: center;
+    padding: 110px 0;
+    font-size: 27px;
+    letter-spacing: 1px;
+    margin: 0;
+    top: -5px;
+}
+.partition-subtitle{
+    font-size: 24px;
+    font-family: PierSans;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #555;
+}
+#contact{
+    .flex{
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: auto;
+    }
+    .section-title{
+        font-size: 48px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .section-subtitle{
+        font-size: 30px;
+        width: 100%;
+    }
+    .seperator{
+        margin: 50px 0;
+        border-width: 3px;
+        border-color: #555;
+    }
+    .form-caption{
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-family: PierSans;
+        font-size: 13px;
+        margin-bottom: 10px;
+        color: #555;
+    }
+    .mild-input{
+        width: 100%;
+        outline: none;
+        padding: 10px;
+        font-size: 15px;
+        font-family: SkModern;
+        color: #222;
+    }
+    .mild-input:focus{
+        border: 1px solid $main-green;
+    }
+    .tall{
+        min-height: 120px;
+        resize: vertical;
+    }
+    .form-group{
+        margin: 15px 0;
+        padding: 0 20px;
+    }
+}
+#contactForm{
+    display: flex;
+    flex-wrap: wrap;
+}
 //parentContainer end
 
 
@@ -423,9 +654,7 @@ $main-green: #82c347;
     form{
         padding: 80px 0;
         text-align: center;
-        .form-caption{
-            font-family: PierSans;
-        }
+
         .underlined-input{
             border-bottom: 1px solid #aaa;
             width: 300px;
