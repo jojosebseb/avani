@@ -22,23 +22,131 @@
     <div id="navbar">
         <div class="container">
             <div class="logo-container">
-                <img src="img/global/logo.png" alt="">
+                <a href="home.html"><img src="img/global/logo.png" alt=""></a>
             </div>
             <ul class="navbar-navigation">
-                <li><a href="#">Product</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Press & Media</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li id="productHandle">
+                    Products
+                    <div id="productDrop">
+                        <div class="container flex">
+                            <div class="navbar-caption">
+                                What is your need?
+                            </div>
+                            <ul class="product-dd-ul">
+                                <li data-value="1">Coffee</li>
+                                <li data-value="2">Juices / Smoothies</li>
+                                <li data-value="3">Salad</li>
+                                <li data-value="4">Soup</li>
+                                <li data-value="5">Muesli / Acai</li>
+                                <li data-value="6">Ice Cream</li>
+                                <li data-value="7">Burgers</li>
+                                <li data-value="8">Finger Food / Snacks</li>
+                            </ul>
+
+                            <div class="product-drop-module" data-value2="1">
+                                <a href="#">
+                                    <img src="img/global/navbar-cup.png" alt="">
+                                    <div class="product-name">
+                                        Compostable Cups
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product-drop-module" data-value2="1,2,5">
+                                <a href="#">
+                                    <img src="img/global/navbar-cup.png" alt="">
+                                    <div class="product-name">
+                                        Wooden Cutlery
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product-drop-module" data-value2="3">
+                                <a href="#">
+                                    <img src="img/global/navbar-straw.png" alt="">
+                                    <div class="product-name">
+                                        The Last Straw
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product-drop-module" data-value2="4,6">
+                                <a href="product-ecobags.html">
+                                    <img src="img/global/navbar-bags.png" alt="">
+                                    <div class="product-name">
+                                        Eco Bags
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product-drop-module" data-value2="1,5">
+                                <a href="#">
+                                    <img src="img/global/navbar-poncho.png" alt="">
+                                    <div class="product-name">
+                                        Eco Poncho
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product-drop-module" data-value2="6">
+                                <a href="#">
+                                    <img src="img/global/navbar-takeaway.png" alt="">
+                                    <div class="product-name">
+                                        Take Away Series
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="media.html">Press & Media</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
             <ul class="navbar-function">
                 <li>Login</li>
                 <li>Cart <span class="" id="navbarQty">0</span></li>
             </ul>
+            <div class="mobile-handle">
+                <div class="mobile-lines" id="line1"></div>
+                <div class="mobile-lines" id="line2"></div>
+                <div class="mobile-lines" id="line3"></div>
+            </div>
         </div>
     </div>
 
     <div id="parentContainer">
-        <section class="section-container" id="pageBanner"></section>
+        <section class="section-container" id="mediaBanner">
+            <div class="container">
+                <div class="media-banner-slider">
+                    <div class="slider-item">
+                        <img src="img/media-release/mediarelease-bg-1.png" alt="">
+                        <div class="slider-news">
+                            <div class="news-category">
+                                news
+                            </div>
+                            <div class="section-title green">
+                                Plastic you can drink: A solution for pollution?
+                            </div>
+                            <div class="paragraph">
+                                The island of Bali is a jewel of the Indonesian archipelago, a tourist magnet known for idyllic beaches and lush forests.
+                                But the curse of plastic pollution threatens to make this a paradise lost, disfigured by trash-strewn shores and sprawling landfill sites.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-item">
+                        <img src="img/media-release/mediarelease-bg-1.png" alt="">
+                        <div class="slider-news">
+                            <div class="news-category">
+                                news
+                            </div>
+                            <div class="section-title green">
+                                Plastic you can drink: A solution for pollution?
+                            </div>
+                            <div class="paragraph">
+                                The island of Bali is a jewel of the Indonesian archipelago, a tourist magnet known for idyllic beaches and lush forests.
+                                But the curse of plastic pollution threatens to make this a paradise lost, disfigured by trash-strewn shores and sprawling landfill sites.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section class="section-container bg-blue" id="mediaSlider">
             <div class="media-slider-container">
@@ -142,7 +250,7 @@
         </section>
 
         <section class="section-container" id="pressroom">
-            Looking for press materials or media contacts? Visit our pressroom
+            Looking for press materials or media contacts? Visit our <a href="press-release.html" class="underlined">Pressroom</a>
         </section>
 
     </div>
@@ -195,6 +303,7 @@
     <script type="text/javascript" src="http://js.static.sldclc.com/angular.1.6.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="http://js.static.sldclc.com/slick-1.6.0.min.js"></script>
+    <script type="text/javascript" src="http://js.static.sldclc.com/jquery.waypoints.4.0.1.min.js"></script>
     <!-- cloud js end   -->
 
     <!-- local js start -->

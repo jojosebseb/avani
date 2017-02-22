@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="">
+    <title>Avani Eco</title>
+
+    <!-- cloud css start -->
+    <link rel="stylesheet" type="text/css" href="http://css.static.sldclc.com/jquery-ui-1.12.1.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://css.static.sldclc.com/slick-1.6.0.css" />
+    <!-- cloud css end-->
+
+    <!-- local css start -->
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1050px)" href="styles/main_desktop.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 1049px)" href="styles/main_mobile.min.css" />
+    <!-- local css end -->
+</head>
+<body>
+
+    <div id="navbar">
+        <div class="container">
+            <div class="logo-container">
+                <a href="home.html"><img src="img/global/logo.png" alt=""></a>
+            </div>
+            <ul class="navbar-navigation">
+                <li id="productHandle">
+                    Products
+                    <!-- <div id="productDrop">
+                        <div class="container flex">
+                            <div class="navbar-caption">
+                                What is your need?
+                            </div>
+                            <ul class="product-dd-ul">
+                                <li data-value="1">Coffee</li>
+                                <li data-value="2">Juices / Smoothies</li>
+                                <li data-value="3">Salad</li>
+                                <li data-value="4">Soup</li>
+                                <li data-value="5">Muesli / Acai</li>
+                                <li data-value="6">Ice Cream</li>
+                                <li data-value="7">Burgers</li>
+                                <li data-value="8">Finger Food / Snacks</li>
+                            </ul>
+
+                            <div class="product-drop-module" data-value2="1">
+                                <a href="#">
+                                    <img src="img/global/navbar-cup.png" alt="">
+                                    <div class="product-name">
+                                        Compostable Cups
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product-drop-module" data-value2="1,2,5">
+                                <a href="#">
+                                    <img src="img/global/navbar-cup.png" alt="">
+                                    <div class="product-name">
+                                        Wooden Cutlery
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product-drop-module" data-value2="3">
+                                <a href="#">
+                                    <img src="img/global/navbar-straw.png" alt="">
+                                    <div class="product-name">
+                                        The Last Straw
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product-drop-module" data-value2="4,6">
+                                <a href="product-ecobags.html">
+                                    <img src="img/global/navbar-bags.png" alt="">
+                                    <div class="product-name">
+                                        Eco Bags
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product-drop-module" data-value2="1,5">
+                                <a href="#">
+                                    <img src="img/global/navbar-poncho.png" alt="">
+                                    <div class="product-name">
+                                        Eco Poncho
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product-drop-module" data-value2="6">
+                                <a href="#">
+                                    <img src="img/global/navbar-takeaway.png" alt="">
+                                    <div class="product-name">
+                                        Take Away Series
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div> -->
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="media.html">Press & Media</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <ul class="navbar-function">
+                <li>Login</li>
+                <li>Cart <span class="" id="navbarQty">0</span></li>
+            </ul>
+            <div class="mobile-handle">
+                <div class="mobile-lines" id="line1"></div>
+                <div class="mobile-lines" id="line2"></div>
+                <div class="mobile-lines" id="line3"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="productDrop">
+        <div class="container flex">
+            <div class="navbar-caption">
+                What is your need?
+            </div>
+            <ul class="product-dd-ul">
+                <li data-value="1">Coffee</li>
+                <li data-value="2">Juices / Smoothies</li>
+                <li data-value="3">Salad</li>
+                <li data-value="4">Soup</li>
+                <li data-value="5">Muesli / Acai</li>
+                <li data-value="6">Ice Cream</li>
+                <li data-value="7">Burgers</li>
+                <li data-value="8">Finger Food / Snacks</li>
+            </ul>
+
+            <div class="product-drop-module" data-value2="1">
+                <a href="product-compostablecups.html">
+                    <img src="img/global/navbar-cup.png" alt="">
+                    <div class="product-name">
+                        Compostable Cups
+                    </div>
+                </a>
+            </div>
+            <div class="product-drop-module" data-value2="1,2,5">
+                <a href="product-cutleries.html">
+                    <img src="img/global/navbar-cup.png" alt="">
+                    <div class="product-name">
+                        Wooden Cutlery
+                    </div>
+                </a>
+            </div>
+            <div class="product-drop-module" data-value2="3">
+                <a href="product-paperstraws.html">
+                    <img src="img/global/navbar-straw.png" alt="">
+                    <div class="product-name">
+                        The Last Straw
+                    </div>
+                </a>
+            </div>
+            <div class="product-drop-module" data-value2="4,6">
+                <a href="product-ecobags.html">
+                    <img src="img/global/navbar-bags.png" alt="">
+                    <div class="product-name">
+                        Eco Bags
+                    </div>
+                </a>
+            </div>
+            <div class="product-drop-module" data-value2="1,5">
+                <a href="product-ecoponcho.html">
+                    <img src="img/global/navbar-poncho.png" alt="">
+                    <div class="product-name">
+                        Eco Poncho
+                    </div>
+                </a>
+            </div>
+            <div class="product-drop-module" data-value2="6">
+                <a href="#">
+                    <img src="img/global/navbar-takeaway.png" alt="">
+                    <div class="product-name">
+                        Take Away Series
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="parentContainer">
+
+        <section class="section-container" id="indexSlider">
+                <div class="slider-container">
+                    <div class="slider-item">
+                        <iframe class="hero-video" src="https://www.youtube.com/embed/eM20C1lJxnI?autoplay=1&controls=0&loop=1&playlist=eM20C1lJxnI" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="slider-item">
+                        blablabla
+                    </div>
+                </div>
+        </section>
+
+        <section class="section-container" id="About">
+            <div class="container">
+                <div class="w50 pad-right">
+                    <div class="section-title">
+                        Engineered <br>
+                        <span class="green">Eco-Products</span>.
+                    </div>
+                    <div class="paragraph">
+                        Avani is a social impact enterprise based in Bali, Indonesia, the epicenter of the battle against plastic waste. Through years of research and development, we have came up with the technology that’s able to replace the otherwise disposable plastic which take hundreds and even thousands of years to be decomposed by Mother nature by using renewable resources made from plants. Parallel to that, as a social impact enterprise, we are committed to good corporate governance and also practice a Triple Bottom Line approach (People, Planet, Profit) in assuring the sustainability of our business.
+                    </div>
+                    <div class="bg-btn bg-blue">
+                        Learn More
+                    </div>
+                </div>
+                <div class="w50">
+                    <iframe class="video" src="https://www.youtube.com/embed/uxolBZZ_fRU" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="section-container bg-blue" id="mediaSlider">
+            <div class="media-slider-container">
+                <div class="media-slide-items">
+                    <div class="container">
+                        <div class="white-title">
+                            Plastic prospects
+                        </div>
+                        <div class="quote-paragraph">
+                            "One of the great things about bioplastics right now is there are always new feedstocks being explored, and what (Avani) is doing with cassava is a great innovation,"
+
+                        </div>
+                        <div class="white-author">
+                            Edward, Owner Multiplex
+                        </div>
+                        <img src="img/dummy-man.png" alt="" class="right-avatar">
+                    </div>
+                </div>
+                <div class="media-slide-items">
+                    <div class="container">
+                        <div class="white-title">
+                            Plastic prospects
+                        </div>
+                        <div class="quote-paragraph">
+                            "One of the great things about bioplastics right now is there are always new feedstocks being explored, and what (Avani) is doing with cassava is a great innovation,"
+
+                        </div>
+                        <div class="white-author">
+                            Edward, Owner Multiplex
+                        </div>
+                        <img src="img/dummy-man.png" alt="" class="right-avatar">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="section-container" id="Principles">
+            <div class="container">
+                <div class="section-title">
+                    Packaging with <span class="blue">principles</span>.
+                </div>
+                <div class="paragraph">
+                    Our vision is to provide sustainable food packaging that is superior in quality at an affordable price.
+                </div>
+                <div class="ingredient-flex">
+                    <div class="ingredient-module">
+                        <img src="img/home/corn.png" alt="">
+                        <div class="module-caption">
+                            Sustainable
+                        </div>
+                        <div class="module-subcaption">
+                            All Avani products are made from renewable resources
+                        </div>
+                    </div>
+                    <div class="ingredient-module">
+                        <img src="img/home/grass.png" alt="">
+                        <div class="module-caption">
+                            Biodegradable and compostable
+                        </div>
+                        <div class="module-subcaption">
+                            All Avani products have been certified biodegradable and compostable
+                        </div>
+                    </div>
+                    <div class="ingredient-module">
+                        <img src="img/home/beans.png" alt="">
+                        <div class="module-caption">
+                            Closed loop circular economy
+                        </div>
+                        <div class="module-subcaption">
+                            Maximizing values and recovering all materials at the end of each service life of material
+                        </div>
+                    </div>
+                    <div class="ingredient-module">
+                        <img src="img/home/aloe.png" alt="">
+                        <div class="module-caption">
+                            Fully customizable
+                        </div>
+                        <div class="module-subcaption">
+                            Customize them according to your needs
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container" id="Solutions">
+            <div class="container">
+                <div class="w50">
+                    <div class="section-title">
+                        Our <span class="blue">technology</span> provide solutions for the <span class="green"> future </span>.
+                    </div>
+                    <div class="paragraph pad-right">
+                        -	Avani provides a full range of sustainable alternatives to plastic that is made 100% from renewable resources. Explore our range of eco-friendly products to find the most sustainable solution for your business as well as household.
+                    </div>
+                    <div class="bg-btn bg-green">
+                        Shop Now
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container" id="IAMNOTPLASTIC">
+            <div class="section-title container">
+                #IAMNOT<span class="green">PLASTIC</span>
+                <div class="paragraph">
+                    We see you. Show us your style with #IAMNOTPLASTIC
+                </div>
+            </div>
+            <div class="gallery-flex container">
+                <div class="gallery-module">
+                    <img src="img/home/gallery-1.png" alt="">
+                    <div class="hover-tint"></div>
+                    <div class="module-data">
+                        <div class="module-functions">
+                            <div class="left">
+                                <span class="delay-1">#IAMNOT<span class="green">PLASTIC</span></span>
+                            </div>
+                            <div class="right">
+                                <span class="delay-2">
+                                    <img src="img/heart.png" alt="" class="ico">
+                                </span>
+                                <span class="delay-3">
+                                    <img src="img/heart.png" alt="" class="ico">
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-module">
+                    <img src="img/home/gallery-1.png" alt="">
+                    <div class="hover-tint"></div>
+
+                </div>
+                <div class="gallery-module">
+                    <img src="img/home/gallery-1.png" alt="">
+                    <div class="hover-tint"></div>
+
+                </div>
+                <div class="gallery-module">
+                    <img src="img/home/gallery-1.png" alt="">
+                    <div class="hover-tint"></div>
+
+                </div>
+                <div class="gallery-module">
+                    <img src="img/home/gallery-1.png" alt="">
+                    <div class="hover-tint"></div>
+
+                </div>
+                <div class="gallery-module">
+                    <img src="img/home/gallery-1.png" alt="">
+                    <div class="hover-tint"></div>
+
+                </div>
+                <div class="gallery-module">
+                    <img src="img/home/gallery-1.png" alt="">
+                    <div class="hover-tint"></div>
+
+                </div>
+                <div class="gallery-module">
+                    <img src="img/home/gallery-1.png" alt="">
+                    <div class="hover-tint"></div>
+
+                </div>
+                <div class="gallery-module">
+                    <img src="img/home/gallery-1.png" alt="">
+                    <div class="hover-tint"></div>
+
+                </div>
+                <div class="gallery-module">
+                    <img src="img/home/gallery-1.png" alt="">
+                    <div class="hover-tint"></div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container" id="asSeen">
+            <div class="container">
+                <div class="side-title">
+                    As Seen In
+                </div>
+                <div class="sponsors-container">
+                    <img src="img/home/sponsors.png" alt="" class="sponsor-img">
+                </div>
+            </div>
+        </section>
+
+        <div class="seperator"></div>
+    </div>
+
+    <div id="newsletter">
+        <div class="container">
+            <div class="newsletter-title">
+                Stay <span class="green">updated</span> with our newsletter.
+            </div>
+            <form action="">
+                <span class="form-caption">Receive email updates</span>
+                <input type="text" class="underlined-input" placeholder="Enter your email address:">
+                <input type="button" name="" value="SUBSCRIBE" class="bg-btn bg-blue">
+            </form>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="container">
+            <div class="footer-ul">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Faq</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Press Media</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </div>
+            <div class="footer-2nd">
+                <ul class="sosmed-ul">
+                    <li><a href="#"><img src="img/global/fb-ico.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/global/twitter-ico.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/global/insta-ico.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/global/pinterest-ico.png" alt=""></a></li>
+                </ul>
+                <span class="copyright">
+                    Copyright © 2017 Avani Eco. All Rights Reserved.
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+</body>
+    <!-- cloud js start -->
+    <script type="text/javascript" src="http://js.static.sldclc.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://js.static.sldclc.com/angular.1.6.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="http://js.static.sldclc.com/slick-1.6.0.min.js"></script>
+    <script type="text/javascript" src="http://js.static.sldclc.com/jquery.waypoints.4.0.1.min.js"></script>
+    <!-- cloud js end   -->
+
+    <!-- local js start -->
+    <script type="text/javascript" src="script/jquery.js"></script>
+    <script type="text/javascript" src="script/angular.js"></script>
+    <!-- local js end   -->
+</html>
