@@ -210,6 +210,7 @@ $main-green: #82c347;
     transition: all .5s ease;
     padding-top: 10px;
     margin-top: 12px;
+    display: none;
     .flex{
         display: flex;
         justify-content: space-between;
@@ -290,7 +291,7 @@ $main-green: #82c347;
     font-size: 30px;
     font-weight: bold;
     letter-spacing: 1px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 .paragraph{
     color: #696969;
@@ -438,11 +439,13 @@ $main-green: #82c347;
         padding: 0px 0;
     }
     .slider-item{
+        // transform: scale(0.2);
         img{
             display: block;
             margin: auto;
         }
     }
+
     .hero-video{
         width: 100%;
         min-height: 110vh;
@@ -451,7 +454,53 @@ $main-green: #82c347;
         top: -5vh;
     }
     .slick-dots{
-        bottom: 13%;
+        bottom: 5%;
+    }
+    .slide-bg{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        // width: 100%;
+    }
+    .slide-btm{
+        position: absolute;
+        right: 50%;
+        top: 40%;
+        z-index: 6;
+        transform: translateX(50%);
+        width: 80%;
+    }
+    .floating-text{
+        // width: 600px;
+        font-family: PierSans;
+        position: absolute;
+        // position: relative;
+        // text-align: center;
+        padding: 20px;
+        top: 30%;
+        left: 50%;
+        z-index: 5;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        .floating-title{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .floating-paragraph{
+            font-size: 16px;
+        }
+    }
+    .slider-container{
+        padding: 0px 0;
+    }
+    .slider-item{
+        min-height: 100vh;
+        position: relative;
+        img{
+            display: block;
+            margin: auto;
+        }
     }
 }
 
@@ -481,13 +530,8 @@ $main-green: #82c347;
 }
 
 #Principles{
-    .paragraph{
-        // width: 450px;
-    }
     .ingredient-flex{
-        // display: flex;
-        // justify-content: space-around;
-        margin: 50px 0;
+        margin: 20px 0 50px;
     }
     .ingredient-module{
         width: 100%;
@@ -511,6 +555,7 @@ $main-green: #82c347;
             font-family: Akrobat;
             font-size: 14px;
             padding: 0 20px;
+
         }
     }
 }
@@ -936,35 +981,37 @@ $main-green: #82c347;
 // .pad-around{
 //     padding: 80px 50px 50px 0;
 // }
-#ecobags{
+#productHero{
     // background-image: url('../img/hero-dummy-2.png');
     padding: 0;
     margin-top: $navbar-height;
+    margin-bottom: 0;
     .flex{
         // display: flex;
     }
     img{
         // height: 550px;
-        width: 60%;
+        width: 100%;
         display: block;
-        margin: 30px auto;
+        margin: 30px auto 0 auto;
         // margin-left: 100px;
     }
 }
 
-#ecobagsBanner{
+#productBanner{
     background-image: url('../img/hero-dummy-2.png');
     min-height: 50vw;
     background-position: center center;
     background-size: cover;
 }
 
-#ecobagsPrinciples{
+#productPrinciples{
+    margin-top: 0;
     .section-title{
-        font-size: 24px;
+        font-size: 17px;
         text-align: center;
         padding: 40px 0 10px;
-        line-height: 30px;
+        line-height: 26px;
     }
     .paragraph{
         // width: 450px;
@@ -973,21 +1020,36 @@ $main-green: #82c347;
         // display: flex;
         justify-content: space-around;
         margin: 50px 0;
+        .slick-dots{
+            bottom: -50px;
+            li.slick-active{
+                background: $main-green;
+            }
+        }
     }
     .ingredient-module{
         width: 100%;
         text-align: center;
         padding: 0 20px;
-        img{
+        .img-container{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: #eee;
+            position: relative;
             display: block;
             margin: auto;
-            width: 50%;
-            margin-bottom: 15px;
+            img{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
         }
         .module-caption{
             font-family: PierSans;
             color: black;
-            margin: 10px 0;
+            margin: 20px 0 0;
             font-weight: bold;
             -webkit-font-smoothing: antialiased;
         }
@@ -996,16 +1058,36 @@ $main-green: #82c347;
             font-family: Akrobat;
             font-size: 14px;
             padding: 0 20px;
+            display: none;
         }
     }
 }
-.vertical-center{
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+#productPrinciples.grey{
+    background: #f0f0f0;
+    .slick-dots{
+        bottom: -55px;
+        ul{
+
+        }
+        li{
+            background: #fff;
+        }
+        li.slick-active{
+            background: $main-green;
+        }
+    }
+    .img-container{
+        background: white;
+    }
 }
-#ecobagsCustomizable{
+.vertical-center{
+    // position: absolute;
+    // top: 50%;
+    // left: 0;
+    // transform: translateY(-50%);
+
+}
+#productCustomizable{
     background-image: url('../img/ecobags/ecobags-banner.png');
     // height: 50vh;
     .container{
@@ -1015,8 +1097,15 @@ $main-green: #82c347;
     .paragraph{
         color: #454545;
     }
+    .customizable-img{
+        width: 100%;
+    }
+}
+#productCustomizable.no-bg{
+    background: none;
 }
 #productEnquiry{
+    display: none;
     padding: 90px 0 50px;
     .paragraph{
         vertical-align: top;
@@ -1029,7 +1118,177 @@ $main-green: #82c347;
         vertical-align: top;
     }
 }
+#productInformation{
+    border-top: 1px solid #d3d3d3;
+    padding-top: 30px;
+    padding-bottom: 0;
+    margin-bottom: -5px;
 
+    .container{
+    }
+    .img-thumb-container{
+        position: relative;
+        .prevArrow{
+            position: absolute;
+            left: 0px;
+            top: 30%;
+            cursor: pointer;
+            transition: all .3s ease;
+            .arrow{
+                position: absolute;
+                border-width: 2px;
+                width: 10px;
+                height: 10px;
+                top: 50%;
+                left: 57%;
+                transform: translate(-50%, -50%) rotateZ(45deg);
+            }
+        }
+        .nextArrow{
+            position: absolute;
+            right: 0px;
+            top: 30%;
+            cursor: pointer;
+            transition: all .3s ease;
+            .arrow{
+                position: absolute;
+                border-width: 2px;
+                width: 10px;
+                height: 10px;
+                top: 50%;
+                left: 43%;
+                transform: translate(-50%, -50%) rotateZ(-135deg);
+            }
+        }
+        .slick-disabled{
+            opacity: 0.5;
+        }
+
+    }
+    .border-container{
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        border: 1px solid #bebebe;
+        padding: 7px;
+        border-radius: 5px;
+    }
+    .section-title{
+        text-align: center;
+        font-size: 30px;
+        text-transform: uppercase;
+        // margin-bottom: 80px;
+    }
+    .product-adapter{
+        font-family: Arial;
+        padding-bottom: 30px;
+        margin-top: 30px;
+        border-bottom: 2px solid #c4c4c4;
+    }
+    .product-name{
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 30px;
+        text-align: center;
+    }
+    .product-information-paragraph{
+        margin-top: 20px;
+        line-height: 25px;
+        color: #515151;
+        border-bottom: 1px solid #dddddd;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        max-height: 50px;
+        overflow: hidden;
+        display: none;
+    }
+    .outline-btn{
+        display: block;
+    }
+    .size-parent{
+        // border-bottom: 1px solid #dddddd;
+        margin: 10px 0;
+        padding: 10px 0;
+        // border-top: 1px solid #ddd;
+        text-align: center;
+        li{
+            padding: 8px 15px;
+            text-align: center;
+            display: inline-block;
+            border: 1px solid #ddd;
+            min-width: 65px;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all .3s ease;
+        }
+        li:hover{
+            border: 1px solid #555;
+        }
+        li.active{
+            border: 2px solid $main-green;
+        }
+        li.black{
+            color: #222;
+            border: 1px solid #222;
+        }
+    }
+    .product-img-container{
+        display: none;
+    }
+    .img-thumb-slide{
+        position: relative;
+        display: flex;
+        width: 225px;
+        margin: 50px auto 0;
+        justify-content: space-between;
+        .img-thumb{
+            // width: 55px;
+            // height: 55px;
+            // border-top: 1px solid #bebebe;
+            // border-bottom: 1px solid #bebebe;
+            padding: 32px;
+            // margin: 0 5px;
+            transition: all .3s ease;
+            img{
+                max-width: 100%;
+                max-height: 100%;
+                display: block;
+                margin: auto;
+                transform: scale(0.6);
+                transition: all .4s ease;
+            }
+        }
+        .img-thumb.slick-current{
+            // border-top: 1px solid $main-green;
+            // border-bottom: 1px solid $main-green;
+            img{
+                transform: scale(1);
+                filter: drop-shadow(0px 5px 8px rgba(0,0,0, 0.5));
+            }
+        }
+    }
+}
+
+.arrow{
+    position: relative;
+    width: 5px;
+    height: 5px;
+    border-bottom: 1px solid #888;
+    border-left: 1px solid #888;
+    display: inline-block;
+}
+.arrow.down{
+    transform: rotateZ(-45deg);
+    margin-left: 5px;
+    top: -3px;
+}
+.arrow.left{
+    transform: rotateZ(45deg);
+}
+.arrow.right{
+    transform: rotateZ(-135deg);
+}
 #mediaBanner{
     margin-top: $navbar-height;
     padding: 0;
