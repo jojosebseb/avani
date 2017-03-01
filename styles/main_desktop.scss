@@ -1090,8 +1090,11 @@ $main-green: #82c347;
         .prevArrow{
             position: absolute;
             left: 50px;
-            top: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 5px;
             cursor: pointer;
+            height: 35px;
             transition: all .3s ease;
             .arrow{
                 position: absolute;
@@ -1106,8 +1109,11 @@ $main-green: #82c347;
         .nextArrow{
             position: absolute;
             right: 50px;
-            top: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 5px;
             cursor: pointer;
+            height: 35px;
             transition: all .3s ease;
             .arrow{
                 position: absolute;
@@ -1129,6 +1135,7 @@ $main-green: #82c347;
         height: 55px;
         border: 1px solid #bebebe;
         padding: 7px;
+        outline: none;
     }
     .section-title{
         text-align: center;
@@ -1178,14 +1185,17 @@ $main-green: #82c347;
         li.black{
             color: #222;
             border: 1px solid #222;
+            display: none;
         }
     }
     .w30{
         width: 34%;
     }
     .product-img-container{
+        width: 320px;
+        height: 320px;
+        margin: auto;
         img{
-            filter: drop-shadow(0px 11px 6px rgba(0,0,0, 0.3));
             display: block;
             margin: auto;
         }
@@ -1196,18 +1206,28 @@ $main-green: #82c347;
         width: 225px;
         margin: 50px auto 0;
         justify-content: space-between;
+        outline: none;
         .img-thumb{
             width: 55px;
             height: 55px;
             border: 1px solid #bebebe;
-            padding: 7px;
             margin-right: 5px;
+            outline: none;
+            cursor: pointer;
+            opacity: 0.6;
             img{
                 max-width: 100%;
                 max-height: 100%;
                 display: block;
                 margin: auto;
             }
+        }
+        .img-thumb.active{
+            border: 1px solid $main-green;
+            opacity: 1;
+        }
+        .img-thumb:hover{
+            opacity: 0.8;
         }
     }
     .w70{
@@ -1222,6 +1242,7 @@ $main-green: #82c347;
     border-bottom: 1px solid #888;
     border-left: 1px solid #888;
     display: inline-block;
+    outline: none;
 }
 .arrow.down{
     transform: rotateZ(-45deg);

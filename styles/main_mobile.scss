@@ -532,6 +532,9 @@ $main-green: #82c347;
 #Principles{
     .ingredient-flex{
         margin: 20px 0 50px;
+        .slick-dots{
+            bottom: -20px;
+        }
     }
     .ingredient-module{
         width: 100%;
@@ -703,6 +706,13 @@ $main-green: #82c347;
         margin-top: 30px;
         display: inline-block;
         vertical-align: top;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .sponsor-module {
+        width: 33%;
+        padding: 10px;
+        align-self: center;
     }
     img{
         width: 100%;
