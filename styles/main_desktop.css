@@ -81,11 +81,12 @@
 }
 
 #navbar .navbar-navigation li {
-  font-weight: bold;
-  margin: 0px 15px;
+  margin: 0px 20px;
   padding: 0px 2px 10px;
   transition: all .3s ease;
   border-bottom: 2px solid transparent;
+  text-transform: capitalize;
+  letter-spacing: 1px;
 }
 
 #navbar .navbar-navigation li a {
@@ -146,14 +147,22 @@
 #productDrop .product-drop-module {
   width: 12.5%;
   cursor: pointer;
-  padding: 10px 10px;
   margin-bottom: 5px;
+  align-self: flex-end;
+  height: 150px;
+  position: relative;
 }
 
 #productDrop .product-drop-module img {
   display: block;
   margin: auto;
   transition: all .3s ease;
+  /* transform: translate(-50%, -50%); */
+  align-self: inherit;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #productDrop .product-drop-module:hover {
@@ -166,7 +175,9 @@
   font-family: SkModern;
   width: 95%;
   margin: 10px auto;
-  font-size: 14px;
+  font-size: 11px;
+  position: absolute;
+  top: 85%;
 }
 
 #productDrop .navbar-caption {
@@ -557,11 +568,12 @@
 }
 
 #Solutions {
-  background: #eee;
-  background-image: url(../img/home/solution-bg-dummy.png);
-  min-height: 650px;
+  background-image: url(../img/home/solution-bg.png);
+  min-height: 37vw;
   background-position: center center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 50px 0;
 }
 
 #IAMNOTPLASTIC {
@@ -583,16 +595,32 @@
 }
 
 #IAMNOTPLASTIC .gallery-module {
-  width: 20%;
+  width: 25%;
   border: 1px solid white;
   position: relative;
   cursor: pointer;
   overflow: hidden;
 }
 
+#IAMNOTPLASTIC .gallery-module .gallery-caption {
+  display: none;
+}
+
 #IAMNOTPLASTIC .gallery-module img {
-  display: block;
+  display: inline-block;
   width: 100%;
+  vertical-align: middle;
+}
+
+#IAMNOTPLASTIC .gallery-module .gallery-owner-image {
+  max-width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 3px;
+}
+
+#IAMNOTPLASTIC .gallery-module .gallery-like, #IAMNOTPLASTIC .gallery-module .gallery-comment {
+  margin-right: 5px;
 }
 
 #IAMNOTPLASTIC .gallery-module .hover-tint {
@@ -612,7 +640,7 @@
 }
 
 #IAMNOTPLASTIC .gallery-module .module-functions {
-  height: 50px;
+  height: 55px;
   background: white;
   border-bottom: 2px solid #82c347;
   border-top: 2px solid #2babe2;
@@ -629,7 +657,7 @@
 
 #IAMNOTPLASTIC .gallery-module .left {
   float: left;
-  padding: 15px 10px;
+  padding: 2px;
 }
 
 #IAMNOTPLASTIC .gallery-module .right {
@@ -639,6 +667,7 @@
 
 #IAMNOTPLASTIC .gallery-module .delay-1 {
   transition: all .2s ease;
+  padding-left: 5px;
   position: relative;
   bottom: -50px;
   opacity: 0;
@@ -1212,7 +1241,7 @@
 
 #productInformation .img-thumb-container .prevArrow {
   position: absolute;
-  left: 50px;
+  left: -50px;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 5px;
@@ -1233,7 +1262,7 @@
 
 #productInformation .img-thumb-container .nextArrow {
   position: absolute;
-  right: 50px;
+  right: -50px;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 5px;
@@ -1253,7 +1282,7 @@
 }
 
 #productInformation .img-thumb-container .slick-disabled {
-  opacity: 0.5;
+  opacity: 0;
 }
 
 #productInformation .border-container {
@@ -1332,17 +1361,27 @@
   width: 320px;
   height: 320px;
   margin: auto;
+  overflow: hidden;
+  position: relative;
 }
 
 #productInformation .product-img-container img {
   display: block;
   margin: auto;
+  width: 320px;
+  position: relative;
+  transition: all .3s ease;
+  cursor: crosshair;
+}
+
+#productInformation .product-img-container img.zoomed {
+  width: 500px;
 }
 
 #productInformation .img-thumb-slide {
   position: relative;
   display: flex;
-  width: 225px;
+  width: 235px;
   margin: 50px auto 0;
   justify-content: space-between;
   outline: none;

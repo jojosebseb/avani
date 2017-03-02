@@ -62,8 +62,8 @@ $( document ).ready(function() {
         variableWidth: true,
         dots: false,
         arrows: true,
-        prevArrow: $('.prevArrow'),
-        nextArrow: $('.nextArrow'),
+        prevArrow: '<div class="border-container prevArrow"><div class="arrow left"></div></div>',
+        nextArrow: '<div class="border-container nextArrow"><div class="arrow right"></div></div>',
         responsive: [
       {
         breakpoint: 1024,
@@ -86,6 +86,7 @@ $( document ).ready(function() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          variableWidth: false,
           arrows: true,
         }
       }
@@ -173,11 +174,20 @@ $( document ).ready(function() {
         var curSelected = $(this).attr('src');
         var curData = $(this).data('sz');
         console.log(curData);
-        thumbImg.parent().removeClass('active');
+        $(this).parents('.img-thumb-slide').find('.img-thumb').removeClass('active');
         $(this).parent().addClass('active');
         $(this).parents('.w30').find('.product-img-container > img').attr('src', curSelected)
-        
+    })
 
+
+    $('.gallery-module').each(function(index){
+        if (index > 7) {
+            $(this).hide();
+        }
+    })
+
+    $('.product-img-container > img').on('click', function(){
+            $(this).toggleClass('zoomed');
     })
 
 

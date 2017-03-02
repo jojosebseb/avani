@@ -210,7 +210,7 @@ $main-green: #82c347;
     transition: all .5s ease;
     padding-top: 10px;
     margin-top: 12px;
-    display: none;
+    // display: none;
     .flex{
         display: flex;
         justify-content: space-between;
@@ -221,7 +221,7 @@ $main-green: #82c347;
     .product-drop-module{
         width: 50%;
         cursor: pointer;
-        margin: -10px 0;
+        margin: -35px 0;
         // padding: 10px 10px;
         margin-bottom: 5px;
         transform: scale(0.8);
@@ -565,7 +565,7 @@ $main-green: #82c347;
 
 #Solutions{
     background: #eee;
-    background-image: url(../img/home/solution-bg-dummy.png);
+    background-image: url(../img/home/solution-bg.png);
     min-height: 650px;
     background-position: center center;
     background-size: cover;
@@ -608,6 +608,9 @@ $main-green: #82c347;
             opacity: 0;
             filter: hue-rotate(0deg);
             transition: opacity .3s ease;
+        }
+        .module-data{
+            display: none;
         }
         .module-functions{
             height: 50px;
@@ -733,7 +736,20 @@ $main-green: #82c347;
     margin: 0;
     margin-top: $navbar-height;
 }
-
+.img-box{
+    background: #eee;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+}
 #History{
     .section-title:after{
         content: "";
@@ -1253,12 +1269,7 @@ $main-green: #82c347;
         margin: 50px auto 0;
         justify-content: space-between;
         .img-thumb{
-            // width: 55px;
-            // height: 55px;
-            // border-top: 1px solid #bebebe;
-            // border-bottom: 1px solid #bebebe;
-            padding: 32px;
-            // margin: 0 5px;
+            // padding: 32px;
             transition: all .3s ease;
             img{
                 max-width: 100%;
@@ -1270,11 +1281,8 @@ $main-green: #82c347;
             }
         }
         .img-thumb.slick-current{
-            // border-top: 1px solid $main-green;
-            // border-bottom: 1px solid $main-green;
             img{
                 transform: scale(1);
-                filter: drop-shadow(0px 5px 8px rgba(0,0,0, 0.5));
             }
         }
     }
