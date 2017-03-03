@@ -1363,19 +1363,21 @@
   margin: auto;
   overflow: hidden;
   position: relative;
+  border: 1px solid white;
 }
 
-#productInformation .product-img-container img {
-  display: block;
-  margin: auto;
+#productInformation .product-img-container .img-bind {
   width: 320px;
-  position: relative;
-  transition: all .3s ease;
-  cursor: crosshair;
+  height: 320px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: background 0.3s ease;
 }
 
-#productInformation .product-img-container img.zoomed {
-  width: 500px;
+#productInformation .product-img-container .img-bind.zoomed {
+  width: 550px;
+  height: 550px;
 }
 
 #productInformation .img-thumb-slide {

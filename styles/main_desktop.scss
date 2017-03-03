@@ -1223,17 +1223,18 @@ $main-green: #82c347;
         margin: auto;
         overflow: hidden;
         position: relative;
-        img{
-            display: block;
-            margin: auto;
+        border: 1px solid white;
+        .img-bind{        
             width: 320px;
-            position: relative;
-            transition: all .3s ease;
-            cursor: crosshair;
+            height: 320px;
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            transition: background 0.3s ease;
         }
-        img.zoomed{
-            // transition: none;
-            width: 500px;
+        .img-bind.zoomed{
+            width: 550px;
+            height: 550px;
         }
     }
     .img-thumb-slide{
@@ -1269,6 +1270,7 @@ $main-green: #82c347;
     .w70{
         width: 66%;
         padding-left: 40px;
+
     }
 }
 .arrow{

@@ -1227,8 +1227,8 @@
 
 #productInformation .img-thumb-container .prevArrow {
   position: absolute;
-  left: 0px;
-  top: 30%;
+  left: -35px;
+  top: 50%;
   cursor: pointer;
   transition: all .3s ease;
 }
@@ -1245,8 +1245,8 @@
 
 #productInformation .img-thumb-container .nextArrow {
   position: absolute;
-  right: 0px;
-  top: 30%;
+  right: -35px;
+  top: 50%;
   cursor: pointer;
   transition: all .3s ease;
 }
@@ -1343,6 +1343,28 @@
 
 #productInformation .product-img-container {
   display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 95;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+#productInformation .product-img-container .img-bind {
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-size: contain;
+  background-position: center center;
+}
+
+#productInformation .product-img-container.active {
+  display: block;
 }
 
 #productInformation .img-thumb-slide {

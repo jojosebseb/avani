@@ -5,7 +5,6 @@ $( document ).ready(function() {
         dots: true,
         arrows: false,
         infinite: false
-        // autoplay: true
     })
     $('.media-slider-container').slick({
         dots: true,
@@ -24,13 +23,12 @@ $( document ).ready(function() {
         variableWidth: false,
         dots: true,
         arrows: false,
-        // autoplay: true
         responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1025,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           infinite: true,
           dots: true
         }
@@ -38,8 +36,8 @@ $( document ).ready(function() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToShow: 1,
+          slidesToScroll: 1
         }
       },
       {
@@ -68,8 +66,8 @@ $( document ).ready(function() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           infinite: true,
           dots: true
         }
@@ -77,8 +75,8 @@ $( document ).ready(function() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToShow: 1,
+          slidesToScroll: 1
         }
       },
       {
@@ -109,8 +107,6 @@ $( document ).ready(function() {
         $(this).toggleClass('active');
         $('#productDrop').toggleClass('active');
     })
-
-
     $(window).on('scroll', function(){
         scrolled = $(this).scrollTop()/4;
         bgMove('scrollAbout');
@@ -169,26 +165,75 @@ $( document ).ready(function() {
     var thumbPreview = "";
     var thumbImg = $('.img-thumb > img');
     var sizeLi = $('.size-parent > li');
+    var productAdapter = $('.product-adapter');
 
     thumbImg.on('click', function(){
         var curSelected = $(this).attr('src');
         var curData = $(this).data('sz');
-        console.log(curData);
         $(this).parents('.img-thumb-slide').find('.img-thumb').removeClass('active');
         $(this).parent().addClass('active');
-        $(this).parents('.w30').find('.product-img-container > img').attr('src', curSelected)
+        $(this).parents('.w30').find('.product-img-container > .img-bind').css('background-image', 'url(' + curSelected + ')')
     })
-
-
     $('.gallery-module').each(function(index){
         if (index > 7) {
             $(this).hide();
         }
     })
-
-    $('.product-img-container > img').on('click', function(){
-            $(this).toggleClass('zoomed');
+    var imgActive = "";
+    productAdapter.each(function(index){
+        imgActive = $(this).find('.img-thumb.active > img').attr('src');
+        $(this).find('.img-bind').css('background-image', 'url(' + imgActive + ')')
     })
+
+    if ($(window).width() < 800) {
+        $('.img-thumb').on('click', function(){
+            // $('.product-img-container').addClass('active')
+            $(this).parents('.w30').find('.product-img-container').addClass('active');
+        })
+        $('.product-img-container').on('click', function(){
+            $(this).removeClass('active');
+        });
+    }
+
+
+
+
+
+    //zoom
+    // function startMove() {
+    //     $('.movable').on('mousemove', function(event) {
+    //         var thisX = event.pageX - $(this).width() / 2,
+    //             thisY = event.pageY - $(this).height() / 2;
+    //         $('.movable').offset({
+    //             left: thisX,
+    //             top: thisY
+    //         });
+    //         $(this).css({
+    //             transition: '0'
+    //         })
+    //     });
+    // }
+    // function endMove() {
+    //     $(this).removeClass('movable');
+    // }
+    // $(".img-bind").on('mousedown', function() {
+    //     $(this).addClass('movable zoomed');
+    //     $(this).parent().css({
+    //         'border': '1px solid #eee'
+    //     })
+    //     startMove();
+    // }).on('mouseup', function() {
+    //     $(this).removeClass('movable zoomed');
+    //     endMove();
+    //     $(this).parent().css({
+    //         'border': '1px solid #fff'
+    //     })
+    //     $(this).css({
+    //         left: 0,
+    //         top: 0
+    //     })
+    // });
+    //zoom
 
 
 });
