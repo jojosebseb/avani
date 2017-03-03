@@ -63,17 +63,18 @@ $main-green: #82c347;
     top: 0;
     left: 0;
     width: 100%;
+    box-shadow: 0px 2px 5px 1px rgba(0,0,0, 0.1);
     // border-bottom: 1px solid #eee;
     .container{
         width: 100%;
         display: flex;
         justify-content: space-between;
-        padding: 5px 10px 0;
+        padding: 10px 10px;
     }
     .logo-container{
         img{
             display: block;
-            width: 90px;
+            width: 75px;
         }
     }
     ul{
@@ -157,18 +158,10 @@ $main-green: #82c347;
         content: ")";
     }
 }
-// #productHandle:after{
-//     content: "v"
-// }
-// #productHandle.active::after{
-//     content: "v";
-//     transform: rotateZ(90deg);
-// }
 .mobile-handle{
     width: 35px;
-    // height: 30px;
     float: right;
-    margin: 20px 0;
+    margin: 10px 0;
     transition: all .3s ease;
     .mobile-lines{
         border: 1px solid $main-green;
