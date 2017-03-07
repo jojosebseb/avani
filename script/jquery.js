@@ -196,6 +196,31 @@ $( document ).ready(function() {
     }
 
 
+    var cSz;
+    var imgt;
+    $('.size-parent').on('click','.size-li',function(){
+        cSz = $(this).data('sz');
+        $(this).parents('.product-adapter').find('.size-li').removeClass('active');
+        $(this).addClass('active');
+        imgt = $(this).parents('.product-adapter').find('.img-thumb>img');
+        imgt.each(function(){
+            if($(this).data('sz')==cSz) {
+                $(this).trigger('click');
+            }
+        });
+    });
+
+    $('.img-thumb-slide').on('click','.img-thumb > img',function(){
+        cSz = $(this).data('sz');
+        imgt = $(this).parents('.product-adapter').find('.size-li');
+        $(this).parents('.product-adapter').find('.size-li').removeClass('active');
+        imgt.each(function(){
+            if($(this).data('sz')==cSz) {
+                $(this).addClass('active');
+            }
+        });
+    });
+
 
 
 
