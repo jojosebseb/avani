@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="w50">
-                    <img src="{{url('/')}}/assets/front/img/ecobags/ecobags-1.png" alt="">
+                    <img src="{{url('/')}}/assets/front/img/products/bagasse/Bagasse-Tableware-header.png" alt="">
                 </div>
             </div>
         </section>
@@ -107,8 +107,6 @@
                             <img src="{{url('/')}}/assets/front/img/products/bagasse/8-Inch-Ripple-Edge-Plate.jpg" alt="">
                         </div>
                         <div class="img-thumb-container">
-
-
                             <div class="img-thumb-slide">
                                 <div class="img-thumb">
                                     <img src="{{url('/')}}/assets/front/img/products/bagasse/8-Inch-Ripple-Edge-Plate.jpg" alt="">
@@ -126,7 +124,6 @@
                             Made from moulded bagasse sugarcane pulp, which is the unused fibre from sugarcane after the juice has been extracted. Bagasse products are biodegradable, compostable and even microwaveable.
                             <br>
                             <br>
-
                             <b>Specifications:</b>
                             <ul class="dotted-ul">
                                 <li>20cm (210×18.6 mm)</li>
@@ -135,7 +132,6 @@
                                 <li>Oil Resistant</li>
                                 <li>Available in packs of 100, 250 or 500 pieces</li>
                             </ul>
-
                         </div>
                         <div class="outline-btn outline-green">
                             <a href="https://avanionline.myshopify.com/collections/take-away-series">Visit Store</a>

@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div class="w50">
-                    <img src="{{url('/')}}/assets/front/img/ecobags/ecobags-1.png" alt="">
+                    <img src="{{url('/')}}/assets/front/img/products/ecobags/Ecobags-Header.png" alt="">
                 </div>
             </div>
         </section>

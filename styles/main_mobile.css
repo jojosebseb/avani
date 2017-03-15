@@ -15,18 +15,29 @@
 }
 
 @font-face {
-  font-family: "PierSans";
-  src: url("../fonts/PierSans-Regular.otf");
+  font-family: "MontserratB";
+  src: url("../fonts/MontserratB-Regular.otf");
 }
 
 @font-face {
-  font-family: "Akrobat";
-  src: url("../fonts/Akrobat-Regular.otf");
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.otf");
+}
+
+@font-face {
+  font-family: "MontserratB";
+  src: url("../fonts/Montserrat-SemiBold.otf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.ttf");
 }
 
 .container {
-  width: 300px;
+  width: 100%;
   margin: auto;
+  padding: 0 25px;
 }
 
 ::selection {
@@ -67,7 +78,8 @@
 
 #navbar .logo-container img {
   display: block;
-  width: 75px;
+  width: 120px;
+  padding: 10px 0;
 }
 
 #navbar ul {
@@ -94,18 +106,17 @@
   padding: 0;
   left: -300vw;
   transition: all .5s ease;
-  background: #82c347;
+  background: #82817d;
   height: 100%;
-  padding: 20% 0;
+  padding: 8% 0;
 }
 
 #navbar .navbar-navigation li {
   text-align: center;
   display: block;
-  font-weight: bold;
   padding: 20px 20px 20px;
   transition: all .3s ease;
-  font-size: 16px;
+  font-size: 18px;
   transition: all .3s ease;
   color: white;
   position: relative;
@@ -113,6 +124,8 @@
   top: 180px;
   overflow: hidden;
   max-height: 50px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
 }
 
 #navbar .navbar-navigation li a {
@@ -163,7 +176,7 @@
 }
 
 .mobile-handle .mobile-lines {
-  border: 1px solid #82c347;
+  border: 1px solid #82817d;
   margin: 5px 2px;
   transition: all .3s ease;
   position: relative;
@@ -196,9 +209,8 @@
   z-index: 98;
   left: 0;
   min-height: 200px;
-  background: #82c347;
   transition: all .5s ease;
-  padding-top: 10px;
+  padding-top: 25px;
   margin-top: 12px;
 }
 
@@ -216,12 +228,19 @@
   margin: -35px 0;
   margin-bottom: 5px;
   transform: scale(0.8);
+  align-self: center;
+  min-height: 140px;
+  position: relative;
 }
 
 #productDrop .product-drop-module img {
   display: block;
   margin: auto;
   transition: all .3s ease;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #productDrop .product-drop-module:hover {
@@ -234,12 +253,16 @@
   font-family: SkModern;
   width: 95%;
   margin: 10px auto;
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  font-size: 14px;
 }
 
 #productDrop .navbar-caption {
   display: none;
   width: 100%;
-  font-family: PierSans;
+  font-family: MontserratB;
   color: white;
   padding: 0px 0 20px;
   text-align: center;
@@ -252,15 +275,74 @@
 
 #productDrop.active {
   width: 100%;
-  top: 74px;
+  top: 10px;
   opacity: 1;
   left: 0;
   min-height: 200px;
-  background: #82c347;
+  background: transparent;
+  position: relative;
+}
+
+.video-btn {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all .5s ease;
+  z-index: 90;
+  cursor: pointer;
+  background: transparent;
+}
+
+.video-btn .youtube {
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+
+.video-btn .cross-btn {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  z-index: 99999999999;
+  color: #82c347;
+  display: none;
+  font-size: 80px;
+  transform: rotateZ(45deg);
+  user-select: none;
+}
+
+.video-btn.active {
+  height: 80%;
+  width: 80%;
+  border-radius: 0;
+  background: black;
+}
+
+.video-btn.active .play-btn {
+  opacity: 0;
+}
+
+.video-btn.active .youtube {
+  display: block;
+}
+
+.video-btn.active .cross-btn {
+  display: block;
 }
 
 #parentContainer {
   min-height: 100vh;
+  transition: all .1s ease;
+}
+
+#parentContainer.blur {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
 }
 
 .section-container {
@@ -278,19 +360,22 @@
 }
 
 .section-title, #newsContent .news-title {
-  font-family: PierSans;
+  font-family: MontserratB;
   font-size: 30px;
   font-weight: bold;
-  letter-spacing: 1px;
   margin-bottom: 10px;
 }
 
 .paragraph {
   color: #696969;
-  font-family: Akrobat;
-  line-height: 28px;
-  font-size: 16px;
+  font-family: Montserrat;
+  line-height: 25px;
+  font-size: 14px;
   margin-bottom: 30px;
+}
+
+.paragraph br {
+  display: none;
 }
 
 .dotted-ul {
@@ -304,6 +389,7 @@
 
 .green {
   color: #82c347;
+  color: black;
 }
 
 .bg-green {
@@ -313,6 +399,7 @@
 
 .blue {
   color: #2babe2;
+  color: black;
 }
 
 .bg-blue {
@@ -393,7 +480,7 @@
 }
 
 .section-subtitle {
-  font-family: PierSans;
+  font-family: MontserratB;
   font-size: 20px;
 }
 
@@ -437,7 +524,7 @@
 }
 
 .slick-dots li.slick-active {
-  background: white;
+  background: #82c347;
   border-radius: 10px;
 }
 
@@ -454,9 +541,16 @@
   padding: 0px 0;
 }
 
+#indexSlider .slider-item {
+  overflow: hidden;
+}
+
 #indexSlider .slider-item img {
   display: block;
   margin: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
 }
 
 #indexSlider .hero-video {
@@ -488,7 +582,7 @@
 }
 
 #indexSlider .floating-text {
-  font-family: PierSans;
+  font-family: MontserratB;
   position: absolute;
   padding: 20px;
   top: 30%;
@@ -499,12 +593,13 @@
 }
 
 #indexSlider .floating-text .floating-title {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 #indexSlider .floating-text .floating-paragraph {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 #indexSlider .slider-container {
@@ -564,7 +659,7 @@
 }
 
 #Principles .ingredient-module .module-caption {
-  font-family: PierSans;
+  font-family: MontserratB;
   color: black;
   margin: 10px 0;
   font-weight: bold;
@@ -573,16 +668,16 @@
 
 #Principles .ingredient-module .module-subcaption {
   color: #696969;
-  font-family: Akrobat;
+  font-family: Montserrat;
   font-size: 14px;
   padding: 0 20px;
 }
 
 #Solutions {
   background: #eee;
-  background-image: url(../img/home/solution-bg.png);
+  background-image: url(../img/home/solution-bg.jpg);
   min-height: 650px;
-  background-position: center center;
+  background-position: 32% center;
   background-size: cover;
 }
 
@@ -649,7 +744,7 @@
   left: 0;
   transition: all .3s ease;
   opacity: 0;
-  font-family: PierSans;
+  font-family: MontserratB;
   font-weight: bold;
 }
 
@@ -732,7 +827,7 @@
 
 #asSeen .side-title {
   color: black;
-  font-family: PierSans;
+  font-family: MontserratB;
   font-size: 30px;
   display: inline-block;
   vertical-align: top;
@@ -769,7 +864,7 @@
   background-size: cover;
   background-position: center center;
   margin: 0;
-  margin-top: 74px;
+  margin-top: 67px;
 }
 
 .img-box {
@@ -797,7 +892,7 @@
 }
 
 #scrollAbout {
-  background-image: url(../img/dummy-bg.png);
+  background-image: url("http://www.avanieco.com/assets/front/img/about-image-product.jpg");
   min-height: 50vw;
   background-size: cover;
   background-position: center 0;
@@ -812,6 +907,7 @@
 #mediaSlider {
   margin-top: 50px;
   padding: 0;
+  display: none;
 }
 
 #mediaSlider .container {
@@ -825,14 +921,14 @@
 }
 
 #mediaSlider .white-title {
-  font-family: PierSans;
+  font-family: MontserratB;
   color: white;
   font-size: 24px;
 }
 
 #mediaSlider .quote-paragraph {
   color: #333;
-  font-family: Akrobat;
+  font-family: Montserrat;
   margin: 20px 0 30px;
   line-height: 28px;
   font-weight: 500;
@@ -840,7 +936,7 @@
 }
 
 #mediaSlider .white-author {
-  font-family: Akrobat;
+  font-family: Montserrat;
   font-style: italic;
   color: white;
 }
@@ -868,7 +964,7 @@
 #news .news-parent-container {
   display: flex;
   flex-wrap: wrap;
-  font-family: PierSans;
+  font-family: MontserratB;
   padding: 35px 0;
   border-bottom: 1px solid #eee;
 }
@@ -882,7 +978,7 @@
   width: 100%;
   margin-bottom: 10px;
   font-size: 30px;
-  font-family: PierSans;
+  font-family: MontserratB;
 }
 
 #news .news-category {
@@ -924,7 +1020,7 @@
 }
 
 #relatedNews .related-news-title {
-  font-family: PierSans;
+  font-family: MontserratB;
   border-top: 5px solid #eee;
   padding: 30px 0;
   font-size: 22px;
@@ -933,7 +1029,7 @@
 #relatedNews .news-parent-container {
   display: flex;
   flex-wrap: wrap;
-  font-family: PierSans;
+  font-family: MontserratB;
   padding: 35px 0 35px;
   border-bottom: 1px solid #eee;
 }
@@ -947,7 +1043,7 @@
   width: 100%;
   margin-bottom: 10px;
   font-size: 18px;
-  font-family: Akrobat;
+  font-family: Montserrat;
   color: #757575;
 }
 
@@ -975,7 +1071,7 @@
 #pressroom {
   background: #82c347;
   color: white;
-  font-family: PierSans;
+  font-family: MontserratB;
   font-weight: bold;
   text-align: center;
   padding: 50px 50px;
@@ -987,7 +1083,7 @@
 
 .partition-subtitle {
   font-size: 24px;
-  font-family: PierSans;
+  font-family: MontserratB;
   font-weight: bold;
   margin-bottom: 20px;
   color: #555;
@@ -995,7 +1091,7 @@
 
 #contact {
   padding: 0;
-  margin-top: 74px;
+  margin-top: 67px;
 }
 
 #contact .flex {
@@ -1026,7 +1122,7 @@
   font-weight: bold;
   letter-spacing: 1px;
   text-transform: uppercase;
-  font-family: PierSans;
+  font-family: MontserratB;
   font-size: 13px;
   margin-bottom: 10px;
   color: #555;
@@ -1062,7 +1158,7 @@
 
 #contact .img-subcaption {
   text-align: center;
-  font-family: PierSans;
+  font-family: MontserratB;
   color: #bcbcbc;
   margin: 30px auto;
   font-weight: normal;
@@ -1079,17 +1175,19 @@
 
 #productHero {
   padding: 0;
-  margin-top: 74px;
+  margin-top: 90px;
   margin-bottom: 0;
 }
 
 #productHero img {
-  width: 100%;
+  max-width: 100%;
+  max-height: 310px;
   display: block;
   margin: 30px auto 0 auto;
 }
 
 #productBanner {
+  margin: 0;
   background-image: url("../img/hero-dummy-2.png");
   min-height: 50vw;
   background-position: center center;
@@ -1144,7 +1242,7 @@
 }
 
 #productPrinciples .ingredient-module .module-caption {
-  font-family: PierSans;
+  font-family: MontserratB;
   color: black;
   margin: 20px 0 0;
   font-weight: bold;
@@ -1153,7 +1251,7 @@
 
 #productPrinciples .ingredient-module .module-subcaption {
   color: #696969;
-  font-family: Akrobat;
+  font-family: Montserrat;
   font-size: 14px;
   padding: 0 20px;
   display: none;
@@ -1194,6 +1292,7 @@
 
 #productCustomizable .customizable-img {
   width: 100%;
+  margin-top: 50px;
 }
 
 #productCustomizable.no-bg {
@@ -1224,6 +1323,7 @@
 
 #productInformation .img-thumb-container {
   position: relative;
+  display: none;
 }
 
 #productInformation .img-thumb-container .prevArrow {
@@ -1285,7 +1385,6 @@
   font-family: Arial;
   padding-bottom: 30px;
   margin-top: 30px;
-  border-bottom: 2px solid #c4c4c4;
 }
 
 #productInformation .product-name {
@@ -1340,26 +1439,14 @@
 #productInformation .size-parent li.black {
   color: #222;
   border: 1px solid #222;
-}
-
-#productInformation .product-img-container {
   display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  z-index: 95;
-  background: rgba(0, 0, 0, 0.3);
 }
 
 #productInformation .product-img-container .img-bind {
   height: 300px;
   width: 300px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: auto;
+  display: block;
   background-size: contain;
   background-position: center center;
 }
@@ -1417,13 +1504,14 @@
 }
 
 #mediaBanner {
-  margin-top: 74px;
+  margin-top: 67px;
   padding: 0;
 }
 
 #mediaBanner .container {
   position: relative;
   width: 100%;
+  padding: 0;
 }
 
 #mediaBanner .slider-item {
@@ -1447,7 +1535,7 @@
 }
 
 #mediaBanner .news-category {
-  font-family: PierSans;
+  font-family: MontserratB;
   border-bottom: 1px solid #333;
   font-size: 20px;
   display: inline-block;
@@ -1483,7 +1571,7 @@
 }
 
 #pressRelease {
-  margin-top: 74px;
+  margin-top: 67px;
 }
 
 #pressRelease .container {
@@ -1516,7 +1604,7 @@
 }
 
 #pressRelease .press-title {
-  font-family: PierSans;
+  font-family: MontserratB;
   font-weight: bold;
   font-size: 19px;
 }
@@ -1579,7 +1667,7 @@
 }
 
 #videoCampaign .press-title {
-  font-family: PierSans;
+  font-family: MontserratB;
   font-weight: bold;
   font-size: 19px;
 }
@@ -1647,7 +1735,7 @@
 
 #extraCampaign .w40 {
   width: 45%;
-  font-family: PierSans;
+  font-family: MontserratB;
   display: flex;
   border: 1px solid white;
 }
@@ -1675,7 +1763,7 @@
 }
 
 #newsContent {
-  margin-top: 74px;
+  margin-top: 67px;
   padding: 0;
 }
 
@@ -1685,7 +1773,7 @@
 }
 
 #newsContent .news-time-container {
-  font-family: Akrobat;
+  font-family: Montserrat;
   padding: 50px 0 0px;
 }
 
@@ -1707,7 +1795,7 @@
 }
 
 #newsletter .newsletter-title {
-  font-family: PierSans;
+  font-family: MontserratB;
   font-weight: bold;
   font-size: 30px;
   text-align: center;
@@ -1716,7 +1804,7 @@
 #newsletter form {
   padding: 30px 0;
   text-align: center;
-  font-family: PierSans;
+  font-family: MontserratB;
 }
 
 #newsletter form .underlined-input {
@@ -1726,11 +1814,11 @@
   padding-bottom: 5px;
   margin: 20px 0px;
   padding-left: 0px;
-  font-family: Akrobat;
+  font-family: Montserrat;
   width: 80%;
   outline: none;
   vertical-align: top;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
 }
 
@@ -1740,6 +1828,7 @@
   padding: 50px 0;
   font-family: SkModern;
   text-align: center;
+  transition: all .1s ease;
 }
 
 #footer .footer-ul {
@@ -1767,4 +1856,8 @@
 
 #footer .sosmed-ul li img {
   display: block;
+}
+
+#footer.blur {
+  filter: blur(8px);
 }
