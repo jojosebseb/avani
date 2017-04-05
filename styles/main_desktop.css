@@ -1689,12 +1689,17 @@
 
 #pressRelease .flex {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: space-between;
 }
 
+#pressRelease .flex::after {
+  content: '';
+  width: 30%;
+}
+
 #pressRelease .date {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   color: #acacac;
 }
 
@@ -1734,7 +1739,7 @@
 }
 
 #pressRelease .press-functions li {
-  display: inline-block;
+  display: block;
   padding: 10px 0;
   cursor: pointer;
   margin-right: 0px;
@@ -1752,6 +1757,40 @@
 
 #pressRelease .press-functions li:active {
   transform: translateY(2px);
+}
+
+.press-module {
+  padding-bottom: 20px;
+}
+
+.press-functions {
+  padding: 0 !important;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  opacity: 0;
+  transition: all .3s ease;
+}
+
+.press-functions li {
+  background: rgba(255, 255, 255, 0.9);
+  width: 35px !important;
+  height: 35px;
+  position: relative;
+  padding: 0 !important;
+  margin: 1px 0px 0 0 !important;
+  margin-top: 1px;
+}
+
+.press-functions li img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.press-module:hover .press-functions {
+  opacity: 1;
 }
 
 .video-btn {
@@ -1827,8 +1866,13 @@
   justify-content: space-between;
 }
 
+#videoCampaign .flex::after {
+  content: '';
+  width: 30%;
+}
+
 #videoCampaign .date {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   color: #acacac;
 }
 
@@ -1873,7 +1917,7 @@
 }
 
 #videoCampaign .press-functions li {
-  display: inline-block;
+  display: block;
   padding: 10px 0;
   cursor: pointer;
   margin-right: 20px;
@@ -1903,7 +1947,7 @@
 }
 
 #extraCampaign .press-functions li {
-  display: inline-block;
+  display: block;
   padding: 10px 0;
   cursor: pointer;
   margin-right: 20px;
