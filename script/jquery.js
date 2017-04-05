@@ -196,6 +196,11 @@ $( document ).ready(function() {
         $('.product-img-container').on('click', function(){
             $(this).removeClass('active');
         });
+        $('.gallery-module').each(function(index){
+            if (index > 3) {
+                $(this).hide();
+            }
+        })
     }
 
 
