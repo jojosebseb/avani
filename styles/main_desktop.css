@@ -1705,6 +1705,17 @@
 
 #pressRelease .press-module {
   width: 30%;
+  position: relative;
+}
+
+#pressRelease .press-module .video-btn.active {
+  position: fixed;
+}
+
+#pressRelease .press-module .play-btn {
+  width: 50px;
+  height: 50px;
+  top: -60%;
 }
 
 #pressRelease .press-module .press-img {
@@ -2078,6 +2089,85 @@
   #newsContent .news-category {
     font-size: 12px;
   }
+}
+
+.socmed-handle {
+  position: relative;
+  height: 35px;
+  width: 35px !important;
+}
+
+.socmed-handle img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.socmed-handle .share-box {
+  width: 35px;
+  height: 35px;
+  background: #8791b5;
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  transition: all 0.4s cubic-bezier(0.52, 0.02, 0.48, 1.6);
+  right: 0;
+  opacity: 0;
+  transform: rotateZ(-45deg);
+  border-radius: 50%;
+}
+
+.socmed-handle .share-box img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all .1s ease;
+}
+
+.socmed-handle .share-twitter {
+  background: #00aced;
+}
+
+.socmed-handle .share-fb {
+  background: #3b5998;
+  transition-delay: 0.05s;
+}
+
+.socmed-handle .share-gp {
+  background: #dd4b39;
+  transition-delay: 0.1s;
+}
+
+.socmed-handle:hover {
+  opacity: 1 !important;
+}
+
+.socmed-handle:hover .share-box {
+  opacity: 1;
+  transform: rotateZ(0);
+  border-radius: 0;
+}
+
+.socmed-handle:hover .share-twitter {
+  right: -36px;
+}
+
+.socmed-handle:hover .share-fb {
+  right: -72px;
+}
+
+.socmed-handle:hover .share-gp {
+  right: -108px;
+}
+
+.socmed-handle:hover .share-box:hover {
+  opacity: 0.9;
+}
+
+.socmed-handle:hover .share-box:hover img {
+  transform: translate(-50%, -50%) scale(0.9);
 }
 
 .nav-margin {

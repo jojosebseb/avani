@@ -1528,6 +1528,15 @@ $main-grey: #82817d;
     }
     .press-module{
         width: 30%;
+        position: relative;
+        .video-btn.active{
+            position: fixed;
+        }
+        .play-btn{
+            width: 50px;
+            height: 50px;
+            top: -60%;
+        }
         .press-img{
             display: block;
             width: 100%;
@@ -1884,6 +1893,79 @@ $main-grey: #82817d;
         }
         .news-category{
             font-size: 12px;
+        }
+    }
+}
+.socmed-handle{
+    position: relative;
+    height: 35px;
+    width: 35px !important;
+    // background: #eee;
+    // padding: 0 !important;
+    img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .share-box{
+        width: 35px ;
+        height: 35px;
+        background: rgb(135, 145, 181);
+        display: inline-block;
+        // border-radius: 50%;
+        position: absolute;
+        top: 0px;
+        transition: all .4s cubic-bezier(0.52, 0.02, 0.48, 1.6);
+        right: 0;
+        opacity: 0;
+        transform: rotateZ(-45deg);
+        border-radius: 50%;
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all .1s ease;
+            // width: 60%;
+        }
+
+    }
+    .share-twitter{
+        background: #00aced;
+    }
+    .share-fb{
+        background: #3b5998;
+        transition-delay: 0.05s;
+    }
+    .share-gp{
+        background: #dd4b39;
+        transition-delay: 0.1s;
+    }
+
+}
+.socmed-handle:hover{
+    opacity: 1 !important;
+
+    .share-box{
+        opacity: 1;
+        transform: rotateZ(0);
+        border-radius: 0;
+    }
+    .share-twitter{
+        right: -36px;
+    }
+    .share-fb{
+        right: -72px;
+    }
+    .share-gp{
+        right: -108px;
+    }
+    .share-box:hover{
+        opacity: 0.9;
+
+        img{
+            transform: translate(-50%, -50%) scale(0.9);
         }
     }
 }
