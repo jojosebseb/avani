@@ -1556,8 +1556,9 @@ $main-grey: #82817d;
             display: inline-block;
             padding: 10px 0;
             cursor: pointer;
-            margin-right: 20px;
+            margin-right: 0px;
             width: 30px;
+            height: 35px;
         }
         img{
             display: block;
@@ -1990,6 +1991,7 @@ $main-grey: #82817d;
 .slide-position-left{
     position: absolute;
     left: 10%;
+    right: auto;
 }
 
 .slide-position-center{
@@ -2002,6 +2004,7 @@ $main-grey: #82817d;
 .slide-position-right{
     position: absolute;
     right: 10%;
+    left: auto;
 }
 
 
@@ -2009,6 +2012,7 @@ $main-grey: #82817d;
 .slide-position-top{
     position: absolute;
     top: 10%;
+    bottom: auto;
 }
 
 .slide-position-middle{
@@ -2020,6 +2024,7 @@ $main-grey: #82817d;
 .slide-position-bottom{
     position: absolute;
     bottom: 0;
+    top: auto;
 }
 
 .slide-position-center.slide-position-middle{

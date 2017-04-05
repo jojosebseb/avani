@@ -1737,8 +1737,9 @@
   display: inline-block;
   padding: 10px 0;
   cursor: pointer;
-  margin-right: 20px;
+  margin-right: 0px;
   width: 30px;
+  height: 35px;
 }
 
 #pressRelease .press-functions img {
@@ -2193,6 +2194,7 @@
 .slide-position-left {
   position: absolute;
   left: 10%;
+  right: auto;
 }
 
 .slide-position-center {
@@ -2204,11 +2206,13 @@
 .slide-position-right {
   position: absolute;
   right: 10%;
+  left: auto;
 }
 
 .slide-position-top {
   position: absolute;
   top: 10%;
+  bottom: auto;
 }
 
 .slide-position-middle {
@@ -2220,6 +2224,7 @@
 .slide-position-bottom {
   position: absolute;
   bottom: 0;
+  top: auto;
 }
 
 .slide-position-center.slide-position-middle {
