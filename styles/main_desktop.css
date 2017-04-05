@@ -2212,15 +2212,15 @@
 }
 
 .socmed-handle:hover .share-twitter {
-  right: -36px;
+  right: 36px;
 }
 
 .socmed-handle:hover .share-fb {
-  right: -72px;
+  right: 72px;
 }
 
 .socmed-handle:hover .share-gp {
-  right: -108px;
+  right: 108px;
 }
 
 .socmed-handle:hover .share-box:hover {
