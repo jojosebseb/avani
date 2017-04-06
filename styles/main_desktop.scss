@@ -1772,12 +1772,12 @@ $main-grey: #82817d;
         width: 45%;
         font-family: MontserratB;
         display: flex;
-        // background: #eee;
         border: 1px solid white;
+        min-height: 150px;
     }
     .ul-before{
         ul{
-            margin-left: 80px;
+            margin-left: 20px;
         }
         li{
             margin: 17% 0;

@@ -1978,10 +1978,11 @@
   font-family: MontserratB;
   display: flex;
   border: 1px solid white;
+  min-height: 150px;
 }
 
 #extraCampaign .ul-before ul {
-  margin-left: 80px;
+  margin-left: 20px;
 }
 
 #extraCampaign .ul-before li {
