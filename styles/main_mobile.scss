@@ -92,8 +92,8 @@ $main-grey: #82817d;
     .logo-container{
         img{
             display: block;
-            width: 120px;
-            padding: 10px 0;
+            width: 60px;
+            padding: 0px 0;
         }
     }
     ul{
@@ -317,14 +317,14 @@ $main-grey: #82817d;
         z-index: 99999999999;
         color: $main-green;
         display: none;
-        font-size: 80px;
+        font-size: 50px;
         transform: rotateZ(45deg);
         user-select: none;
     }
 }
 .video-btn.active{
-    height: 80%;
-    width: 80%;
+    height: 100%;
+    width: 100%;
     border-radius: 0;
     background: black;
     .play-btn{
@@ -512,7 +512,7 @@ $main-grey: #82817d;
     overflow: hidden;
     // background-color: #3d3d3d;
     padding: 0px 0;
-    margin-top: 0;
+    margin-top: 55px;
     top: 0;
     transition: all 1s ease;
     .slider-container{

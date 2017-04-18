@@ -88,10 +88,10 @@ $main-grey: #82817d;
         padding: 5px 0;
     }
     .logo-container{
-        padding: 10px 0;
+        // padding: 10px 0;
         img{
             display: block;
-            // width: 90px;
+            width: 90px;
         }
     }
     ul{
@@ -904,7 +904,7 @@ $main-grey: #82817d;
         display: flex;
         flex-wrap: wrap;
         font-family: MontserratB;
-        padding: 65px 0;
+        padding: 25px 0 25px;
         border-bottom: 1px solid #eee;
     }
     .month-sort{
@@ -913,7 +913,7 @@ $main-grey: #82817d;
     }
     .news-date{
         width: 100%;
-        margin-bottom: 10px;
+        margin-top: 30px;
         font-size: 30px;
         font-family: MontserratB;
     }
@@ -933,6 +933,8 @@ $main-grey: #82817d;
     }
     .news-img{
         display: block;
+        width: 100%;
+        height: auto;
     }
     .underlined-btn{
         transition: all .3s ease;
@@ -1092,7 +1094,7 @@ $main-grey: #82817d;
     margin-bottom: 0;
     .flex{
         display: flex;
-        height: 550px;
+        min-height: 550px;
     }
     img{
         max-height: 100%;
@@ -1667,6 +1669,11 @@ $main-grey: #82817d;
         border-bottom: 5px solid #d9d6d6;
         padding-bottom: 40px;
     }
+    .image-box{
+        height: 130px;
+        overflow: hidden;
+        position: relative;
+    }
 
     .flex{
         display: flex;
@@ -1694,7 +1701,7 @@ $main-grey: #82817d;
         .play-btn{
             width: 50px;
             height: 50px;
-            top: -60%;
+            // top: -60%;
         }
         .press-img{
             display: block;
@@ -1703,6 +1710,10 @@ $main-grey: #82817d;
         .press-img{
             display: block;
             width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     }
     .press-title{
@@ -1800,25 +1811,39 @@ $main-grey: #82817d;
 #newsContent{
     margin-top: $navbar-height;
     padding: 0;
+    .container{
+        width: 600px;
+        margin: auto;
+    }
     .news-title{
         @extend .section-title;
         font-size: 40px;
         margin-top: 20px;
+        text-align: center;
     }
     .news-time-container{
         font-family: Montserrat;
         padding: 50px 0 0px;
+        text-align: center;
     }
     .news-lapse{
 
         color: #989898;
     }
     .news-paragraph{
+        padding-top: 30px;
         padding-bottom: 50px;
     }
 }
 //parentContainer end
-
+.media-banner-slider{
+    min-height: 500px;
+    .slider-item{
+        min-height: 500px;
+        background-position: center center;
+        background-size: cover;
+    }
+}
 
 //newsletter start
 #newsletter{
@@ -1901,6 +1926,14 @@ $main-grey: #82817d;
         justify-content: space-between;
     }
     #news{
+        .container{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .container > a{
+            width: 45%;
+        }
         .paragraph{
             font-size: 12px;
             line-height: 23px;
@@ -1926,7 +1959,7 @@ $main-grey: #82817d;
             width: 800px;
         }
         .news-parent-container{
-            width: 45%;
+            // width: 45%;
             img{
                 width: 100%;
             }
@@ -2038,42 +2071,39 @@ $main-grey: #82817d;
 
 .slide-position-center{
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-
+    left: 50% !important;
+    transform: translateX(-50%) !important;
 }
 
 .slide-position-right{
     position: absolute;
-    right: 10%;
-    left: auto;
+    right: 10% !important;
+    left: auto !important;
 }
-
-
 
 .slide-position-top{
     position: absolute;
-    top: 10%;
-    bottom: auto;
+    top: 13% !important;
+    bottom: auto !important;
 }
 
 .slide-position-middle{
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 50% !important;
+    transform: translateY(-50%) !important;
 }
 
 .slide-position-bottom{
     position: absolute;
-    bottom: 0;
-    top: auto;
+    bottom: 0 !important;
+    top: auto !important;
 }
 
 .slide-position-center.slide-position-middle{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
 }
 
 //pageBuilding tools
